@@ -40,8 +40,9 @@ $( "#datepicker" ).datepicker( { defaultDate: new Date(1965, 9, 17),
 function goToDate(date) {
 	var i = 0;
 	while(date >= imageList[i]) { i++; }
-	$("#startDate").html($.datepicker.formatDate(dateFormat, imageList[i-1]));
-	$("#endDate").html( $.datepicker.formatDate(dateFormat, imageList[i]));
+	var displayFormat = "D, dd M yy";
+	$("#startDate").html($.datepicker.formatDate(displayFormat, imageList[i-1]));
+	$("#endDate").html( $.datepicker.formatDate(displayFormat, imageList[i]));
 	var imageName = $.datepicker.formatDate(dateFormat, imageList[i-1]);
 	$("#dataImage").attr("src", "images/" + imageName + ".jpg");
 }
@@ -51,7 +52,7 @@ function goToDate(date) {
 </head>
 <body>
 <table><tr><td width="90%">Displaying Data for <span id="startDate">start</span>
-to <span id="endDate">end</span></td><td nowrap="true">
+- <span id="endDate">end</span></td><td nowrap="true">
 Skip to Date: <input type="text" id="datepicker"></td></tr></table>
 <div><img id="dataImage" src="images/1965-10-17.jpg" name=
 "dataImage" alt="table data as image"></div>

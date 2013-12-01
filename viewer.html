@@ -28,7 +28,7 @@ $.get("imagelist.json").done(function( data ) {
 		imageList[i] = $.datepicker.parseDate(dateFormat, data[i]);
 	}
 	imageList[imageList.length] = new Date();
-	goToDate(new Date(1985, 9, 17));
+	goToDate(new Date(1965, 9, 17));
 }).fail(function(error) { console.log(error); });
 $( "#datepicker" ).datepicker( { defaultDate: new Date(1965, 9, 17),  
         minDate: new Date(1965, 9, 17), maxDate: new Date(2010, 8, 17),
@@ -56,6 +56,23 @@ function goToDate(date) {
 Skip to Date: <input type="text" id="datepicker"></td></tr></table>
 <div><img id="dataImage" src="images/1965-10-17.jpg" name=
 "dataImage" alt="table data as image"></div>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9445561; 
+var sc_invisible=1; 
+var sc_security="337986d9"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="click tracking"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9445561/0/337986d9/1/"
+alt="click tracking"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
 </body>
 </html>
 
